@@ -1,0 +1,110 @@
+
+Testing given queries
+1. what([a, city, in, canada], X).
+	?- what([a, city, in, canada], X).
+X = belleville
+Yes (0.00s cpu, solution 1, maybe more)
+
+2. ?- what([the, canadian, man, with, a, large, account, in, a, local, bank], X).
+	No (0.00s cpu)
+	
+3. ?- what([any, foreign, male, person, with, a, small, account, in, a, canadian, bank], X).
+	X = troy
+	Yes (0.00s cpu, solution 1, maybe more)
+
+4. ?- what([a, foreign, male, person, from, losAngeles, with, a, small, account, in, rbc], X).
+	X = troy
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+5. ?- what([a, balance, of, a, large, account, in, a, local, bank], X).
+	X = 30000
+		Yes (0.00s cpu, solution 1, maybe more)
+		X = 250125
+		Yes (0.00s cpu, solution 2, maybe more)
+		X = 100000
+
+6.  ?- what([any, local, bank, with, an, account, of, a, man, from, usa], X).
+	X = rbc
+	Yes (0.00s cpu, solution 1, maybe more)
+
+
+7. ?- what([any, local, bank, with, an, account, of, a, man, from, usa], X).
+	X = rbc
+	Yes (0.00s cpu, solution 1, maybe more)	
+	
+8. 	?- what([a, woman, from, markham, with, a, medium, account], X).
+	X = amado
+	Yes (0.00s cpu, solution 1, maybe more)
+
+9.  ?- what([a, bank, in, canada, with, a, small, account, of, a, foreign, person], X).
+	X = rbc
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+10. ?- what([a, medium, account, in, a, canadian, bank, with, a, small, account, of, an, american], X).
+	X = 13
+	Yes (0.00s cpu, solution 1, maybe more
+	
+11. ?- what([the, balance, of, the, medium, account, in, mero_credit_union, of, a, woman, from, markham], X).
+	No (0.00s cpu)
+
+12. ?- what([a, balance, of, an, account, of, an, american, with, a, small, account, in, a, local, bank, with, ...], X).
+	X = 10
+	Yes (0.02s cpu, solution 1, maybe more)
+
+
+Part 2: Testing ten EXTRA queries (more emphasis on "the" and "between")
+
+1.	?- what([a, city, in, usa], X).
+	X = losAngeles
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+2.	?- what([an, old, account, of, an, american, person], X).
+	X = 12
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+3.	?- what([the, balance, of, the, medium, account, in, canada], X).
+	No (0.00s cpu)
+	
+4.	?- what([the, account, of, an, american, from, newyork], X).
+	No (0.00s cpu)
+	
+5.	?- what([the, account, of, an, american, from, losAngeles], X).
+	X = 12
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+6.	?- what([the, owner, of, a, account, in, a, local, bank, with, a, small, balance, in, rbc], X).
+	X = troy
+	Yes (0.05s cpu, solution 1, maybe more)
+	X = troy
+	Yes (0.08s cpu, solution 2, maybe more)
+	X = troy
+	Yes (0.09s cpu, solution 3, maybe more)
+	X = troy
+	Yes (0.11s cpu, solution 4, maybe more)
+	X = troy
+	Yes (0.16s cpu, solution 5, maybe more)
+	X = troy
+	Yes (0.19s cpu, solution 6, maybe more)
+	X = troy
+	Yes (0.23s cpu, solution 7, maybe more)
+	X = troy
+	Yes (0.25s cpu, solution 8, maybe more)
+	X = troy
+	Yes (0.30s cpu, solution 9, maybe more)
+	No (0.31s cpu)
+	
+7.	?- what([a, recent, account, of, a, canadian, person], X).
+	X = 11
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+8.	?- what([a, balance, between, 3000, and, 8000], X).
+	X = 5000
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+9.	?- what([a, balance, between, 3000, and, 8000, of, a, female, person], X).
+	X = 5000
+	Yes (0.00s cpu, solution 1, maybe more)
+	
+10.	?- what([an, account, of, a, female, person, with, a, balance, between, 3000, and, 8000], X).
+	X = 8
+	Yes (0.00s cpu, solution 1, maybe more)
